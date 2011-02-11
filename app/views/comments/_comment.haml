@@ -1,0 +1,9 @@
+%b
+  -if comment.user_id.nil?
+    guest:
+  -else  
+    =User.find(comment.user_id).email + ":"
+  =comment.created_at.strftime('%a, %d %B %Y')
+%br
+=comment.comment
+%p

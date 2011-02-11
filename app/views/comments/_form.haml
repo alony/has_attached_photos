@@ -1,0 +1,6 @@
+-form_for Comment.new do |f| 
+  Your comment:
+  %br
+  =f.text_area :comment, :size => "70x6" 
+  =f.hidden_field :attach_id
+  %p=f.submit 'Сохранить'
